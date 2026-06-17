@@ -116,7 +116,7 @@ heroWrap.addEventListener('mouseenter', function() {
   const img = this.querySelector('img');
   if (img) img.src = './assets/image_hover.jpg';
 
-  hoverSound.currentTime = 0.1;
+  hoverSound.currentTime = 0;
   hoverSound.volume = 0.5;
   hoverSound.play().catch(error => {
 
