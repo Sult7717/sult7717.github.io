@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Huckster - Резюме</title>
+  <meta name="description" content="Личный сайт-визитка. Краткая информация о себе, навыки, опыт и контакты.">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try {
+      var savedTheme = localStorage.getItem('theme');
+      var systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <span class="logo">Huckster</span>
+      <nav class="nav" id="nav">
+        <a href="#about">Обо мне</a>
+        <a href="#skills">Навыки</a>
+        <a href="#experience">Опыт</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <div class="header__right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему" aria-pressed="false">
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <line x1="12" y1="2" x2="12" y2="4.5"></line>
+            <line x1="12" y1="19.5" x2="12" y2="22"></line>
+            <line x1="4.2" y1="4.2" x2="5.9" y2="5.9"></line>
+            <line x1="18.1" y1="18.1" x2="19.8" y2="19.8"></line>
+            <line x1="2" y1="12" x2="4.5" y2="12"></line>
+            <line x1="19.5" y1="12" x2="22" y2="12"></line>
+            <line x1="4.2" y1="19.8" x2="5.9" y2="18.1"></line>
+            <line x1="18.1" y1="5.9" x2="19.8" y2="4.2"></line>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+          </svg>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="hero__eyebrow">Резюме / Портфолио</p>
+          <h1 class="hero__title">Ахметов Султан</h1>
+          <p class="hero__subtitle">frontend-разработчик, project manager<br>да и вообще крутой чел</p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary">Связаться</a>
+            <a href="./assets/Ахметов Султан.pdf" class="btn btn--secondary" download>Скачать резюме (PDF)</a>
+          </div>
+        </div>
+
+        <div class="hero__photo-wrap">
+          <div class="hero__photo" id="heroWrap">
+            <img src="./assets/image.jfif" alt="Фотография" id="heroImage">
+            <p class="hero__photo-caption">Huckster</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section__title" data-animate>Обо мне</h2>
+        <p class="section__text" data-animate>
+          Простой разработчик, который любит кодить и создавать крутые проекты.<br>
+          Увлекаюсь технологиями, всегда стремлюсь учиться новому и расти профессионально.<br>
+          В свободное время люблю играть в видеоигры и смотреть аниме.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <h2 class="section__title" data-animate>Навыки</h2>
+        <ul class="skills-list">
+          <li class="skills-list__item" data-animate>HTML</li>
+          <li class="skills-list__item" data-animate>CSS</li>
+          <li class="skills-list__item" data-animate>JavaScript</li>
+          <li class="skills-list__item" data-animate>Python</li>
+          <li class="skills-list__item" data-animate>Git</li>
+          <li class="skills-list__item" data-animate>React</li>
+          <li class="skills-list__item" data-animate>Node.js</li>
+          <li class="skills-list__item" data-animate>Английский язык</li>
+          <li class="skills-list__item" data-animate>Обучение и развитие</li>
+          <li class="skills-list__item" data-animate>MySQL</li>
+          <li class="skills-list__item" data-animate>CMS Wordpress</li>
+          <li class="skills-list__item" data-animate>Веб-программирование</li>
+          <li class="skills-list__item" data-animate>UI/UX Design</li>
+          <li class="skills-list__item" data-animate>Разработка ПО</li>
+          
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <h2 class="section__title" data-animate>Опыт</h2>
+
+        <div class="timeline">
+          <div class="timeline__item" data-animate>
+            <p class="timeline__period">2025 — настоящее время</p>
+            <h3 class="timeline__role">Студент</h3>
+            <p class="timeline__place">ТУСУР</p>
+            <p class="timeline__desc">На данный момент являюсь студентом ТУСУРа.</p>
+          </div>
+
+          <div class="timeline__item" data-animate>
+            <p class="timeline__period">2025</p>
+            <h3 class="timeline__role">frontend-разработчик</h3>
+            <p class="timeline__place">B-apps</p>
+            <p class="timeline__desc">Являлся некоторое время фронтэнд разработчиком в данной компании. Отвечал за визуальную составляющую проектов и общался с клиентами.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <h2 class="section__title" data-animate>Контакты</h2>
+        <p class="section__text" data-animate>Открыт к предложениям и сотрудничеству. Свяжитесь любым удобным способом.</p>
+
+        <ul class="contact-list" data-animate>
+          <li><span class="contact-list__label">Email</span><a href="mailto:sult7717@gmail.com">sult7717@gmail.com</a></li>
+          <li><span class="contact-list__label">Телефон</span><a href="tel:+77064007330">+7 706 400 73 30</a></li>
+          <li><span class="contact-list__label">Telegram</span><a href="#" target="_blank" rel="noopener">@sult7717</a></li>
+          <li><span class="contact-list__label">GitHub</span><a href="#" target="_blank" rel="noopener">github.com/Sult7717</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; <span id="year"></span> Huckster</p>
+      <!-- <a href="#top" class="footer__top">Наверх</a> -->
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
