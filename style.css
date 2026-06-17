@@ -343,6 +343,7 @@ img {
 }
 
 .hero__photo {
+  cursor: pointer;
   position: relative;
   width: 20rem;
   height: auto;
